@@ -1,17 +1,20 @@
 package br.com.diego.openbank.model;
+/*calsse do modelo cliente*/
+public class ClientModel {
 
-public class Cliente {
-
+    /*atributos encapsulados*/
     private String name;
     private  String endereco;
     private  String cpfCnpj;
 
 
-    public Cliente(String name, String cpfCnpj) {
+    /*construtores*/
+    public ClientModel(String name, String cpfCnpj) {
         this.name = name;
         this.cpfCnpj = cpfCnpj;
     }
 
+    /*getters e setters*/
     public String getName() {
         return name;
     }
