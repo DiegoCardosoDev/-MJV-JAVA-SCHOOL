@@ -70,15 +70,8 @@ public class MovimentacionModel {
 
     @Override
     public String toString() {
-        return "+--------------------------------------------------+" + "\n" +
-                "| DADOS DA MOVIMENTAÇÃO                            |" + "\n" +
-                "+--------------------------------------------------+" + "\n" +
-                "|data:" + date.format(dateTimeFormatter) + "\n" +
-                "|estornado:" + estornado + "\n" +
-                "|valor:" + NumberFormat.getCurrencyInstance().format(valor) + "\n" +
-                "|tipo:" + tipoMov.getType() + "\n" +
-                "|Cliente:" + cliente.getName()   +"\n" +
-                "|DOCUMENTO: "+ cliente.getCpfCnpj() + "\n" +
-                "+--------------------------------------------------+";
+        return
+                date.format(dateTimeFormatter)+";"+ cliente.getCpfCnpj() + ";" + cliente.getName() + ";" + valor + ";" + tipoMov.getType() + ";"+ estornado
+               ;
     }
 }
