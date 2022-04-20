@@ -2,6 +2,7 @@ package br.com.diego.openbank.model;
 
 import br.com.diego.openbank.TipoMov;
 
+import java.text.NumberFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
@@ -63,15 +64,21 @@ public class MovimentacionModel {
 
     /*FORMATAÇÃO DE DATA PADRÃO PORTUGUES BR*/
     DateTimeFormatter dateTimeFormatter = DateTimeFormatter
-            .ofPattern("dd/MM/yyyy HH:mm:ss", new Locale("PT", "br"));
+            .ofPattern("yyyyMMdd", new Locale("PT", "br"));
+
+
+
     @Override
     public String toString() {
-        return "MovimentacionModel{" +
-                "date=" + date.format(dateTimeFormatter) +
-                ", estornado=" + estornado +
-                ", valor=" + valor +
-                ", tipoMov=" + tipoMov +
-                ", cliente=" + cliente.getName()  +
-                '}';
+        return "+--------------------------------------------------+" + "\n" +
+                "| DADOS DA MOVIMENTAÇÃO                            |" + "\n" +
+                "+--------------------------------------------------+" + "\n" +
+                "|data:" + date.format(dateTimeFormatter) + "\n" +
+                "|estornado:" + estornado + "\n" +
+                "|valor:" + NumberFormat.getCurrencyInstance().format(valor) + "\n" +
+                "|tipo:" + tipoMov.getType() + "\n" +
+                "|Cliente:" + cliente.getName()   +"\n" +
+                "|DOCUMENTO: "+ cliente.getCpfCnpj() + "\n" +
+                "+--------------------------------------------------+";
     }
 }
