@@ -6,12 +6,14 @@ public class ClientModel {
     private String name;
     private  String endereco;
     private  String cpfCnpj;
+    Andress andress;
 
 
     /*construtores*/
-    public ClientModel(String name, String cpfCnpj) {
+    public ClientModel(String name, String cpfCnpj, Andress andress) {
         this.name = name;
         this.cpfCnpj = cpfCnpj;
+        this.andress = andress;
     }
 
     /*getters e setters*/
@@ -37,5 +39,13 @@ public class ClientModel {
 
     public void setCpfCnpj(String cpfCnpj) {
         this.cpfCnpj = cpfCnpj;
+    }
+
+    public Andress getAndress() {
+        return andress;
+    }
+
+    public void setAndress(Andress andress) {
+        this.andress = andress;
     }
 }

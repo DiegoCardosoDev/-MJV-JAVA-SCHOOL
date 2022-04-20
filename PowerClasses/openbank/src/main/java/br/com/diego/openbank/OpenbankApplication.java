@@ -4,6 +4,7 @@ package br.com.diego.openbank;
  * classe reponsável por rodar a aplicação
  */
 
+import br.com.diego.openbank.model.Andress;
 import br.com.diego.openbank.model.ClientModel;
 import br.com.diego.openbank.model.MovimentacionModel;
 import org.springframework.boot.SpringApplication;
@@ -19,8 +20,10 @@ public class OpenbankApplication {
 	public static void main(String[] args) throws IOException {
 		SpringApplication.run(OpenbankApplication.class, args);
 
+        /*instanciado objeto endereço*/
+        Andress andress1 = new Andress("R.Capital 151, santo amaro,Sp");
 		/*instanciado objeto cleinte*/
-		ClientModel c1 = new ClientModel("RAIMUNDO NONATO LOUREIRO CASTELO BRANCO","135.217.791-18");
+		ClientModel c1 = new ClientModel("RAIMUNDO NONATO LOUREIRO CASTELO BRANCO","135.217.791-18", andress1);
 
 		/*instacia do objeto movimentações*/
 		MovimentacionModel m1 = new MovimentacionModel();
