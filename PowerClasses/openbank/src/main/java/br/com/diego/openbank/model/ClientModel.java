@@ -4,10 +4,8 @@ public class ClientModel {
 
     /*atributos encapsulados*/
     private String name;
-    private  String endereco;
     private  String cpfCnpj;
     Andress andress;
-
 
     /*construtores*/
     public ClientModel(String name, String cpfCnpj, Andress andress) {
@@ -23,14 +21,6 @@ public class ClientModel {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getEndereco() {
-        return endereco;
-    }
-
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
     }
 
     public String getCpfCnpj() {
