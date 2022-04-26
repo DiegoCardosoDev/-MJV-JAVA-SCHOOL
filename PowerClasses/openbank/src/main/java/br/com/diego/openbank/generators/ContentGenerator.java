@@ -24,10 +24,10 @@ public class ContentGenerator {
             sb.append(String.format("%-29s", name));
         }
 
-        sb.append(String.format("%010d", Long.valueOf(movimentacionModel.getValor().toString().replaceAll("[\\D]", ""))));
+        sb.append(String.format("%010d", Long.valueOf(movimentacionModel.getValue().toString().replaceAll("[\\D]", ""))));
         sb.append(movimentacionModel.getTipoMov());
 
-        if (movimentacionModel.getEstornado()){
+        if (movimentacionModel.getReversed()){
             sb.append("1");
 
         }else {

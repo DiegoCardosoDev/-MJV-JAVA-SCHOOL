@@ -4,6 +4,7 @@ package br.com.diego.openbank;
  * classe reponsável por rodar a aplicação
  */
 
+import br.com.diego.openbank.enums.TypeMov;
 import br.com.diego.openbank.model.ClientModel;
 import br.com.diego.openbank.generators.ContentGenerator;
 import br.com.diego.openbank.generators.FileGenerator;
@@ -26,9 +27,9 @@ public class OpenbankApplication {
 		MovimentacionModel  m1 = new MovimentacionModel();
 		m1.setDate(LocalDateTime.now());
 		m1.setClientModel(c1);
-		m1.setValor(1275.48);
+		m1.setValue(1275.48);
 		m1.setTipoMov(TypeMov.RECEITA);
-		m1.setEstornado(Boolean.FALSE);
+		m1.setReversed(Boolean.FALSE);
 
 		ContentGenerator contentGenerator = new ContentGenerator();
 		String content = contentGenerator.generator(m1,c1);

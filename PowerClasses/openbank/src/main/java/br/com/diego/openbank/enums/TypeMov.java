@@ -1,4 +1,4 @@
-package br.com.diego.openbank;
+package br.com.diego.openbank.enums;
 
 public enum TypeMov {
 

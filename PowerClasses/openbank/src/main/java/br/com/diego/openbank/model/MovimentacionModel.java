@@ -1,6 +1,6 @@
 package br.com.diego.openbank.model;
 
-import br.com.diego.openbank.TypeMov;
+import br.com.diego.openbank.enums.TypeMov;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -9,15 +9,15 @@ import java.util.Locale;
 public class MovimentacionModel {
 
     private LocalDateTime date;
-    private Boolean estornado;
-    private Double valor;
+    private Boolean reversed;
+    private Double value;
     TypeMov typeMov;
     ClientModel clientModel;
 
-    public MovimentacionModel(LocalDateTime date, Boolean estornado, Double valor, TypeMov typeMov, ClientModel clientModel) {
+    public MovimentacionModel(LocalDateTime date, Boolean reversed, Double value, TypeMov typeMov, ClientModel clientModel) {
         this.date = date;
-        this.estornado = estornado;
-        this.valor = valor;
+        this.reversed = reversed;
+        this.value = value;
         this.typeMov = typeMov;
         clientModel = clientModel;
 
@@ -34,12 +34,12 @@ public class MovimentacionModel {
         this.date = date;
     }
 
-    public Boolean getEstornado() {
-            return estornado;
+    public Boolean getReversed() {
+            return reversed;
     }
 
-    public void setEstornado(Boolean estornado) {
-        this.estornado = estornado;
+    public void setReversed(Boolean reversed) {
+        this.reversed = reversed;
     }
 
     public TypeMov getTipoMov() {
@@ -50,12 +50,12 @@ public class MovimentacionModel {
         this.typeMov = typeMov;
     }
 
-    public Double getValor() {
-        return valor;
+    public Double getValue() {
+        return value;
     }
 
-    public void setValor(Double valor) {
-        this.valor = valor;
+    public void setValue(Double value) {
+        this.value = value;
     }
 
     public ClientModel getClientModel() {
