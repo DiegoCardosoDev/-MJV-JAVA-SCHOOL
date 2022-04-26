@@ -18,6 +18,7 @@ public class Application {
 
         /*obtendo os dados do objeto pelo tostring*/
         System.out.println("pessoa1: " + person1.toString());
+
         /*obtendo os dados do objeto por get*/
         System.out.println("pessoa2: " + person2.getName() + " - " + person2.getCpf() + " - " + person2.getEndereco());
 

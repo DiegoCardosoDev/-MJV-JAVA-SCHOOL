@@ -1,6 +1,6 @@
 package br.com.diego.openbank.model;
 
-import br.com.diego.openbank.TipoMov;
+import br.com.diego.openbank.TypeMov;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -11,11 +11,16 @@ public class MovimentacionModel {
     private LocalDateTime date;
     private Boolean estornado;
     private Double valor;
-    TipoMov tipoMov;
+    TypeMov typeMov;
     ClientModel clientModel;
 
-    public MovimentacionModel(ClientModel clientModel) {
-        this.clientModel = clientModel;
+    public MovimentacionModel(LocalDateTime date, Boolean estornado, Double valor, TypeMov typeMov, ClientModel clientModel) {
+        this.date = date;
+        this.estornado = estornado;
+        this.valor = valor;
+        this.typeMov = typeMov;
+        clientModel = clientModel;
+
     }
 
     public MovimentacionModel() {
@@ -37,20 +42,12 @@ public class MovimentacionModel {
         this.estornado = estornado;
     }
 
-    public TipoMov getTipoMov() {
-        return tipoMov;
+    public TypeMov getTipoMov() {
+        return typeMov;
     }
 
-    public void setTipoMov(TipoMov tipoMov) {
-        this.tipoMov = tipoMov;
-    }
-
-    public ClientModel getCliente() {
-        return clientModel;
-    }
-
-    public void setCliente(ClientModel clientModel) {
-        this.clientModel = clientModel;
+    public void setTipoMov(TypeMov typeMov) {
+        this.typeMov = typeMov;
     }
 
     public Double getValor() {
@@ -61,16 +58,19 @@ public class MovimentacionModel {
         this.valor = valor;
     }
 
+    public ClientModel getClientModel() {
+        return clientModel;
+    }
+
+    public void setClientModel(ClientModel clientModel) {
+        this.clientModel = clientModel;
+    }
+
     /*FORMATAÇÃO DE DATA PADRÃO PORTUGUES BR*/
     DateTimeFormatter dateTimeFormatter = DateTimeFormatter
             .ofPattern("yyyyMMdd", new Locale("PT", "br"));
 
 
 
-    @Override
-    public String toString() {
-        return
-                date.format(dateTimeFormatter)+";"+ clientModel.getCpfCnpj() + ";" + clientModel.getName() + ";" + valor + ";" + tipoMov.getType() + ";"+ estornado
-               ;
-    }
+
 }

@@ -1,6 +1,6 @@
 package br.com.diego.openbank;
 
-public enum TipoMov {
+public enum TypeMov {
 
     RECEITA("R"),
     DESPESA("D");
@@ -8,7 +8,7 @@ public enum TipoMov {
     /*declaração do enum*/
     private final String type;
     /*construtor do enum*/
-    TipoMov(String type) {
+    TypeMov(String type) {
         this.type = type;
     }
 
