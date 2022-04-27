@@ -5,10 +5,10 @@ package br.com.diego.openbank;
  */
 
 import br.com.diego.openbank.enums.TypeMov;
-import br.com.diego.openbank.model.ClientModel;
+import br.com.diego.openbank.models.ClientModel;
 import br.com.diego.openbank.generators.ContentGenerator;
 import br.com.diego.openbank.generators.FileGenerator;
-import br.com.diego.openbank.model.MovimentacionModel;
+import br.com.diego.openbank.models.MovimentacionModel;
 import com.opencsv.exceptions.CsvDataTypeMismatchException;
 import com.opencsv.exceptions.CsvRequiredFieldEmptyException;
 

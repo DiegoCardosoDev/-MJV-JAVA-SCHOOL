@@ -1,7 +1,7 @@
 package br.com.diego.openbank.generators;
 
-import br.com.diego.openbank.model.ClientModel;
-import br.com.diego.openbank.model.MovimentacionModel;
+import br.com.diego.openbank.models.ClientModel;
+import br.com.diego.openbank.models.MovimentacionModel;
 
 public class ContentGenerator {
 

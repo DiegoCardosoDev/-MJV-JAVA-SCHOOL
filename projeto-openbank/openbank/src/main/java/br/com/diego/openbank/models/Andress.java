@@ -1,4 +1,4 @@
-package br.com.diego.openbank.model;
+package br.com.diego.openbank.models;
 
 public class Andress {
 
