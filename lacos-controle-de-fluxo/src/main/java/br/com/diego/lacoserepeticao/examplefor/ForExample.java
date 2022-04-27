@@ -5,8 +5,16 @@ public class ForExample {
     public static void main(String[] args) {
 
         /*variavel de controle;condição;ação*/
+        System.out.println("icremento");
         for(int i = 0; i <= 10; ++i){
-            System.out.println( i );
+            System.out.println("valor de i= " +  i );
+
+
+        }
+
+        System.out.println("decremento");
+        for(int i = 10; i >= 0; --i){
+            System.out.println("valor de i= " +  i );
 
         }
 
@@ -17,6 +25,12 @@ public class ForExample {
                 System.out.println("i:" + i + " j:" + j);
             } // fim de j
         } // fim de i
+
+        System.out.println("descendo e subindo");
+        for(int sobe=1, desce=10 ; sobe<=10 && desce>=1; sobe++, desce--){
+            System.out.printf("%d \t %d \n", sobe, desce);
+        }
+
     }
 }
 
