@@ -4,7 +4,7 @@ import br.com.diego.agualuz.enums.TipoServico;
 import br.com.diego.agualuz.models.Cliente;
 import br.com.diego.agualuz.models.Contrato;
 import br.com.diego.agualuz.models.Endrereco;
-import br.com.diego.agualuz.models.GeraradorMsg;
+import br.com.diego.agualuz.services.GeraradorMsg;
 
 
 import java.time.LocalDateTime;
