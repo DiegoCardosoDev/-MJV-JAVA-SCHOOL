@@ -1,5 +1,6 @@
 package br.com.diego.agualuz;
 
+import br.com.diego.agualuz.enums.TipoServico;
 import br.com.diego.agualuz.models.Cliente;
 import br.com.diego.agualuz.models.Contrato;
 import br.com.diego.agualuz.models.Endrereco;
@@ -18,7 +19,7 @@ public class AguaLuzApplication {
 
 		contrato1.setDataHora(LocalDateTime.of(2022, 2, 21,16, 0));
 		contrato1.setProtocolo(20222025687L);
-		contrato1.setServico("Agua");
+		contrato1.setTipoServico(TipoServico.AGUA);
 		contrato1.setValor(127.33);
 		contrato1.setCliente(cliente);
 
