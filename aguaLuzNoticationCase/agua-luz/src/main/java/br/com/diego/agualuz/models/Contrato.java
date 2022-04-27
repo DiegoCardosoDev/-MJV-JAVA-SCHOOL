@@ -1,5 +1,7 @@
 package br.com.diego.agualuz.models;
 
+import br.com.diego.agualuz.enums.TipoServico;
+
 import java.time.LocalDateTime;
 
 public class Contrato {
@@ -10,6 +12,16 @@ public class Contrato {
     private Long protocolo;
     Cadastro cadastro;
     Cliente cliente;
+
+    TipoServico tipoServico;
+
+    public TipoServico getTipoServico() {
+        return tipoServico;
+    }
+
+    public void setTipoServico(TipoServico tipoServico) {
+        this.tipoServico = tipoServico;
+    }
 
     public Cliente getCliente() {
         return cliente;
